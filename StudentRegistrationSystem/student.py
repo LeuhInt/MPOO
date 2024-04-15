@@ -40,8 +40,25 @@ class Student:
 
     def setCourse(self, course):
         self.__course = course
-    
 
-
-
-
+    def __str__(self):
+        return (f'{'ENROLLMENT':^60}\n'
+                f'{'-' * 60}\n'
+                f'{'STUDENT INFORMATION':^30}\n'
+                f'{'-' * 60}\n'
+                f'ID Number: {self.getIdNumber()}\n'
+                f'Student name: {self.getName()} \n'
+                f'Address: {self.getAddress()} \n'
+                f'{'-' * 60}\n'
+                f'{'DEGREE INFORMATION':^30}\n'
+                f'{'-' * 60}\n'
+                f'{self.getDegree()}\n'
+                f'{'-' * 60}\n'
+                f'{'COURSE INFORMATION':^30}\n'
+                f'{'-' * 60}\n'
+                f'Course code: {self.getCourse().getCode()}\n'
+                f'Course name: {self.getCourse().getName()}\n'
+                f'Course duration: {self.getCourse().getContactHours()}h\n'
+                f'Requisites: {self.getCourse().getRequisites()}\n'
+                f'Professor name: {self.getCourse().getProfessor().getName()}\n'
+                f'Lecture Hall: {self.getCourse().getLectureHall()}\n')

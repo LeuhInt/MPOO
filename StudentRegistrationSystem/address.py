@@ -35,3 +35,7 @@ class Address:
 
     def setCountry(self, country: str):
         self.__country = country
+
+    def __str__(self):
+        return (f'Street name: {self.getStreet()} - Street number: {self.getNumber()}\n'
+                f'City: {self.getCity()} - State: {self.getState()} - Country: {self.getCountry()}')

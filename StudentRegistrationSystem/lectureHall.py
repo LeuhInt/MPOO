@@ -9,9 +9,11 @@ class LectureHall:
     def getSeats(self):
         return self.__seats
 
-    def setName(self, name):
+    def setName(self, name: str):
         self.__name = name
 
-    def setSeats(self, seats):
+    def setSeats(self, seats: int):
         self.__seats = seats
 
+    def __str__(self):
+        return f'Name: {self.getName()}, Seats: {self.getSeats()}'

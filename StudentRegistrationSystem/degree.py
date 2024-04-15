@@ -22,3 +22,7 @@ class Degree:
     def setDuration(self, duration: int):
         self.__duration = duration
 
+    def __str__(self):
+        return (f'Degree code: {self.getCode()}\n'
+                f'Degree name: {self.getName()}\n'
+                f'Degree duration: {self.getDuration()}h')

@@ -70,9 +70,9 @@ class TvRemote:
 
 oTvRemote = TvRemote()
 oTvRemote.powerOn()
-oTvRemote.getInfo()
+# oTvRemote.getInfo()
 oTvRemote.setChannel()
 oTvRemote.raiseVolume()
-oTvRemote.lowerChannel()
+# oTvRemote.lowerChannel()
 oTvRemote.muteOn()
 oTvRemote.getInfo()
