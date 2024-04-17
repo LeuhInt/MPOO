@@ -1,7 +1,7 @@
 from StudentRegistrationSystem.degree import Degree
 from StudentRegistrationSystem.address import Address
 from StudentRegistrationSystem.course import Course
-
+from StudentRegistrationSystem.course import Professor
 
 class Student:
     def __init__(self, idNumber: int, name: str, degree: Degree, address: Address, course: Course):
@@ -14,7 +14,7 @@ class Student:
     def getIdNumber(self):
         return self.__idNumber
 
-    def getName(self):
+    def getName(self) -> str:
         return self.__name
 
     def getDegree(self):
@@ -46,19 +46,21 @@ class Student:
                 f'{'-' * 60}\n'
                 f'{'STUDENT INFORMATION':^30}\n'
                 f'{'-' * 60}\n'
-                f'ID Number: {self.getIdNumber()}\n'
-                f'Student name: {self.getName()} \n'
-                f'Address: {self.getAddress()} \n'
+                f'ID Number: {self.__idNumber}\n'
+                f'Student name: {self.__name} \n'
+                f'Address: {self.__address} \n'
                 f'{'-' * 60}\n'
                 f'{'DEGREE INFORMATION':^30}\n'
                 f'{'-' * 60}\n'
-                f'{self.getDegree()}\n'
+                f'{self.__degree}\n'
                 f'{'-' * 60}\n'
                 f'{'COURSE INFORMATION':^30}\n'
                 f'{'-' * 60}\n'
-                f'Course code: {self.getCourse().getCode()}\n'
-                f'Course name: {self.getCourse().getName()}\n'
-                f'Course duration: {self.getCourse().getContactHours()}h\n'
-                f'Requisites: {self.getCourse().getRequisites()}\n'
-                f'Professor name: {self.getCourse().getProfessor().getName()}\n'
-                f'Lecture Hall: {self.getCourse().getLectureHall()}\n')
+                f'Course code: {self.__course.getCode()}\n'
+                f'Course semester: {self.__course.getSemester()}º\n'
+                f'Course name: {self.__course.getName()}\n'
+                f'Course duration: {self.__course.getContactHours()}h\n'
+                f'Requisites: {self.__course.getRequisites()}\n'
+                f'Professor name: {self.__course.getProfessor().getName()}\n'
+                f'Lecture Hall: {self.__course.getLectureHall()}\n')
+
